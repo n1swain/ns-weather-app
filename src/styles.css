@@ -1,0 +1,70 @@
+h1,
+h2 {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: block;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+#celsius,
+#fahrenheit {
+  color: rgb(104, 149, 127);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.location {
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: white;
+}
+.background-box {
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  background: rgb(178, 216, 194);
+  width: 90%;
+}
+.form-box {
+  border-radius: 5px;
+}
+
+.search-button {
+  display: inline;
+  font-family: "Poppin", sans-serif;
+  font-weight: 500;
+  border-radius: 8px;
+  background: rgb(104, 149, 127);
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+}
+.weather-info {
+  font-family: "Poppin", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+
+.fa-sun {
+  font-size: 70px;
+}
+.bold-weather-info {
+  display: inline-block;
+  position: relative;
+  left: 10%;
+}
+
+.next-week-info {
+  padding-top: 30px;
+}
+
+.days-of-week {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.icon-small {
+  font-size: 20px;
+}
