@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">    
+    <script src="https://kit.fontawesome.com/1a22dfccc4.js" crossorigin="anonymous"></script>
+    
+  </head>
+
+  <body>
+    <div class="container background-box">
+        <div class="container">
+          <div class="row">
+            <div class="col location">
+              LONDON
+            </div>
+            <div class="col location">
+              NEW YORK
+            </div>
+            <div class="col location">
+              TOKYO
+            </div>
+          </div>
+        </div>
+        </br>
+      <form id="search-box">
+        <input class="form-box" id="location" type="text" placeholder="your location">
+        <input class="search-button" type="submit" value="search">
+        <button class="search-button" id="">my location</button>
+      </form>
+      <h1> PARIS </h1>
+      <div class="container weather-info">
+        <div class="row">
+        <div class="col-6 weather-details"> 
+          <strong id="day-time">Saturday 13:00</strong>
+          <br/>
+        <div id ="weather-condition">raining</div>
+      <hr/>
+      Humidity:</span id="humidity-percentage"> 3%</span>
+      <br/>
+      Wind: <span id="wind">9 </span> km/h
+      
+        </div>
+        <div class="col-6 bold-weather-info">
+          <i class="fas fa-sun"></i>
+          <h2>
+            <span id="temperature"> 19 </span>
+           <span class="units">
+             <small>
+                  <a href="#" id="celsius">°C</a> |
+                  <a href="#" id="fahrenheit">°F</a>
+                  </small>
+           </span>
+          </h2>
+        </div>
+    
+          <div class="container next-week-info">
+            <br />
+      <p> The next few days...</p>
+      <hr/>
+      <div class="row">
+          
+        <div class="col days-of-week"> Sun <br/> <i class="fas fa-sun icon-small"></i></div>
+        <div class="col days-of-week"> Mon <br/> <i class="fas fa-cloud icon-small"></i></div>
+        <div class="col days-of-week"> Tues<br/> <i class="fas fa-cloud-showers-heavy icon-small"></i></div>
+        <div class="col days-of-week"> Wed <br/> <i class="fas fa-cloud-showers-heavy icon-small"></i></div>
+        <div class="col days-of-week"> Thurs <br/> <i class="fas fa-cloud-sun icon-small"></i></div>
+      </div>
+    </div>
+  </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
