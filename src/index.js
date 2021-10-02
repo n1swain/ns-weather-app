@@ -28,10 +28,51 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 //week 5
-function search(event) {
-  event.preventDefault();
-  //let apiKey = "103359604fb606c94ffec4337a6179f3";
-  let city = "Lisbon";
-  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  console.log(city);
+function displayWeatherCondition(response) {
+  //name
+  let h1 = document.querySelector("h1");
+  h1.innerHTML = response.data.name;
+  //temperature
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(response.data.main.temp);
+  //humidity
+  let humidity = document.querySelector("#humidity-percentage");
+  humidity.innerHTML = response.data.main.humidity;
+  //wind
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  //weather condition
+  let weatherCondition = document.querySelector("#weather-condition");
+  weatherCondition.innerHTML = response.data.weather[0].main;
 }
+
+function findCityInfo(city) {
+  let apiKey = "103359604fb606c94ffec4337a6179f3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function cityInputData(event) {
+  event.preventDefault();
+  let city = document.querySelector("#location").value;
+  findCityInfo(city);
+}
+function searchLocation(position) {
+  var apiKey = "103359604fb606c94ffec4337a6179f3";
+  var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat="
+    .concat(position.coords.latitude, "&lon=")
+    .concat(position.coords.longitude, "&appid=")
+    .concat(apiKey, "&units=metric");
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let form = document.querySelector("#search-box");
+form.addEventListener("submit", cityInputData);
+
+var currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);

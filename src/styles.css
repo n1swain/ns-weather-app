@@ -15,21 +15,23 @@ h2 {
   font-size: 20px;
 }
 
+.background-box {
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  background: rgb(178, 216, 194);
+  width: 50%;
+}
 .location {
   padding-top: 10px;
   font-family: "Poppins", sans-serif;
   text-align: center;
   color: white;
 }
-.background-box {
-  border-radius: 5px;
-  padding: 10px;
-  display: block;
-  background: rgb(178, 216, 194);
-  width: 90%;
-}
+
 .form-box {
   border-radius: 5px;
+  margin: 10px;
 }
 
 .search-button {

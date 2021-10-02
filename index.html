@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div class="container background-box">
+      <div class="container background-box">
         <div class="container">
           <div class="row">
             <div class="col location">
@@ -37,25 +37,25 @@
       <form id="search-box">
         <input class="form-box" id="location" type="text" placeholder="your location">
         <input class="search-button" type="submit" value="search">
-        <button class="search-button" id="">my location</button>
+        <button class="search-button" id="current-location">my location</button>
       </form>
-      <h1> PARIS </h1>
+      <h1> City </h1>
       <div class="container weather-info">
         <div class="row">
         <div class="col-6 weather-details"> 
-          <strong id="day-time">Saturday 13:00</strong>
+          <strong id="day-time">Day 00:00</strong>
           <br/>
-        <div id ="weather-condition">raining</div>
+        <div id ="weather-condition">weather condition</div>
       <hr/>
-      Humidity:</span id="humidity-percentage"> 3%</span>
+      Humidity:</span id="humidity-percentage"> 0</span> %
       <br/>
-      Wind: <span id="wind">9 </span> km/h
+      Wind: <span id="wind">0 </span> km/h
       
         </div>
         <div class="col-6 bold-weather-info">
           <i class="fas fa-sun"></i>
           <h2>
-            <span id="temperature"> 19 </span>
+            <span id="temperature"> 0</span>
            <span class="units">
              <small>
                   <a href="#" id="celsius">°C</a> |
@@ -78,7 +78,6 @@
         <div class="col days-of-week"> Thurs <br/> <i class="fas fa-cloud-sun icon-small"></i></div>
       </div>
     </div>
-  </div>
-    <script src="src/index.js"></script>
+  </div>    <script src="src/index.js"></script>
   </body>
 </html>
